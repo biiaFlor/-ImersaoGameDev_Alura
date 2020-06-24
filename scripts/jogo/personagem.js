@@ -1,15 +1,21 @@
 class Persongem extends Animacao{
-   constructor(matriz, imagem, x, largura, altura, larguraSprite, alturaSprite){
-    super(matriz, imagem, x, largura, altura, larguraSprite, alturaSprite)
+   constructor(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite){
+    super(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite);
      
-     this.yInicial = height - this.altura;
+     this.variacaoY = variacaoY;
+     this.yInicial = height - this.altura - this.variacaoY;
      this.y = this.yInicial;
-     this.gravidade = 3;
+     this.gravidade = 6;
      this.velocidadePulo = 0;
+     this.alturaPulo = -50;
+     this.quantidadePulos = 0;
   }
   
   pula(){
-    this.velocidadePulo = -30;
+    if(this.quantidadePulos < 2){
+      this.velocidadePulo = this.alturaPulo;
+      this.quantidadePulos++;
+    }
   }
   
   aplicaGravidade(){
@@ -18,6 +24,7 @@ class Persongem extends Animacao{
     
     if(this.y>this.yInicial){
        this.y = this.yInicial;
+      this.quantidadePulos=0;
     }
   }
   colidindo(inimigo){
