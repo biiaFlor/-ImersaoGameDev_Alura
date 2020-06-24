@@ -4,6 +4,6 @@ class GameOver{
   }
   
   exibe(){
-    image(this.imagem, windowWidth/4, windowHeight/2, 412, 78); 
+    image(this.imagem, windowWidth/4, windowHeight/4, 412, 78); 
   }
 }
