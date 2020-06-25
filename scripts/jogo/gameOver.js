@@ -1,6 +1,8 @@
+//Sem uso
+
 class GameOver{
    constructor(imagem){
-    this.imagem = imagem;
+   this.imagem = imagem;
   }
   
   exibe(){
