@@ -4,6 +4,16 @@ function setup() {
   jogo = new Jogo();
   jogo.setup();
   
+  botaoGerenciador = new BotaoGerenciador('Jogar', width/2, height/2);
+  
+  telaInicial = new TelaInicial();
+  telaInicial.draw();
+  
+  cenas={
+    jogo,
+    telaInicial
+  };
+  
   frameRate(40)
   //somDoJogo.loop();
 }
@@ -13,5 +23,5 @@ function keyPressed() {
 }
 
 function draw() {
-  jogo.draw();
+    cenas[cenaAtual].draw();
 }

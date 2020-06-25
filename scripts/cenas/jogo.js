@@ -42,7 +42,7 @@ class Jogo {
     if (inimigoVisivel) {
       this.inimigoAtual++;
 
-      if (inimigoAtual > 2) {
+      if (this.inimigoAtual > 2) {
         this.inimigoAtual = 0;
       }
       inimigo.velocidade = parseInt(random(10, 30));
