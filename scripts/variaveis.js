@@ -4,6 +4,7 @@ let imagemInimigo;
 let imagemInimigoGrande;
 let imagemInimigoVoador;
 let imagemGameOver;
+let imagemVida;
 let imagemTelaInicial;
 let fonteTelaInicial;
 let somDoPulo;
@@ -18,6 +19,7 @@ let inimigo;
 let inimigoGrande;
 let inimigoVoador;
 let pontuacao;
+let vida;
 
 let cenaAtual = 'telaInicial';
 let cenas;
