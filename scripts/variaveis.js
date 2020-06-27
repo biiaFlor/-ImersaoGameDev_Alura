@@ -21,6 +21,8 @@ let inimigoVoador;
 let pontuacao;
 let vida;
 
+let fita; //usada para ler json
+
 let cenaAtual = 'telaInicial';
 let cenas;
 
@@ -121,4 +123,27 @@ const matrizInimigoVoador = [
   [0, 750],
 ]
 
-const inimigos = []
+const inimigos = [];
+
+const mapa = [
+  {inimigo: 0, velocidade: 10},
+  {inimigo: 2, velocidade: 15},
+  {inimigo: 1, velocidade: 15},
+  {inimigo: 2, velocidade: 20},
+  {inimigo: 0, velocidade: 25},
+  {inimigo: 1, velocidade: 25},
+  {inimigo: 0, velocidade: 25},
+  {inimigo: 2, velocidade: 25},
+  {inimigo: 0, velocidade: 30},
+  {inimigo: 1, velocidade: 32},
+  {inimigo: 1, velocidade: 34},
+  {inimigo: 2, velocidade: 38},
+  {inimigo: 0, velocidade: 30},
+  {inimigo: 2, velocidade: 30},
+  {inimigo: 1, velocidade: 40},
+  {inimigo: 2, velocidade: 40},
+  {inimigo: 0, velocidade: 40},
+  {inimigo: 0, velocidade: 40},
+  {inimigo: 1, velocidade: 45},
+  {inimigo: 2, velocidade: 50}
+]
