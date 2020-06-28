@@ -13,4 +13,6 @@ function preload() {
 
   somDoJogo = loadSound('sons/trilha_jogo.mp3');
   somDoPulo = loadSound('sons/somPulo.mp3');
+  somGameover = loadSound('sons/gameover.mp3');
+  somImpacto = loadSound('sons/impacto.mp3');
 }

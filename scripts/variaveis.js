@@ -8,6 +8,8 @@ let imagemVida;
 let imagemTelaInicial;
 let fonteTelaInicial;
 let somDoPulo;
+let somGameover;
+let somImpacto;
 let jogo;
 let telaInicial;
 let botaoGerenciador;

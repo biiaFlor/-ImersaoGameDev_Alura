@@ -26,7 +26,7 @@ class Jogo {
   keyPressed(key) {
     if (key === 'ArrowUp') {
       personagem.pula()
-      //somDoPulo.play()
+      somDoPulo.play()
     }
   }
 
@@ -60,11 +60,19 @@ class Jogo {
     }
 
     if (personagem.estaColidindo(inimigo)) {
+      somImpacto.play();
       vida.perdeVida();
       personagem.ficaInvencivel();
       
       if(vida.vidas === 0){
-        image(imagemGameOver, width / 2 - 200, height / 3)
+        somDoJogo.stop();
+        somGameover.play();
+        cenario.exibe();
+        image(imagemGameOver, width / 2 - 200, height / 3);
+        textFont(fonteTelaInicial);
+        textAlign(CENTER);
+        textSize(25);
+        text('Pontuacao: ' + parseInt(pontuacao.pontos), width/2, height-200);
         noLoop()
       }
     }
